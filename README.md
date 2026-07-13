@@ -71,7 +71,7 @@ is estimated or projected — see the footnotes for the two honest labels.
   foundry limits (2026-07-14); every figure is measured or explicitly labeled (the two
   honest labels: reused supply current, omitted AC decoupling caps). The CAL layout
   engine was **extended to ihp130** for this build (from scratch), with sky130 unaffected.
-- **Context, not these cells' results.** EM/IR analysis on real ihp130 rules has
-  already been validated on a separate earlier run (an IHP IO-pad golden reference and
-  a ring-oscillator proxy); those numbers are *not* reproduced here and are *not* these
-  two cells' results.
+- **Context, not this cell's result.** EM/IR analysis on real ihp130 rules was also
+  validated on a separate earlier run (an IHP IO-pad golden reference and a 3-stage
+  ring-oscillator); those numbers are *not* reproduced here and are *not* this
+  DualCtrlVCO result.
