@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-properties>
+  <properties><frame-color>#565b61</frame-color><fill-color>#565b61</fill-color><dither-pattern>I5</dither-pattern><valid>true</valid><visible>true</visible><name>EMIR_ok (200/0)</name><source>200/0@1</source></properties>
+  <properties><frame-color>#8f942a</frame-color><fill-color>#8f942a</fill-color><dither-pattern>I5</dither-pattern><valid>true</valid><visible>true</visible><name>EMIR_watch (201/0)</name><source>201/0@1</source></properties>
+  <properties><frame-color>#e05a1a</frame-color><fill-color>#e05a1a</fill-color><dither-pattern>I5</dither-pattern><valid>true</valid><visible>true</visible><name>EMIR_over (202/0)</name><source>202/0@1</source></properties>
+  <properties><frame-color>#d0203a</frame-color><fill-color>#d0203a</fill-color><dither-pattern>I5</dither-pattern><valid>true</valid><visible>true</visible><name>EMIR_high (203/0)</name><source>203/0@1</source></properties>
+  <properties><frame-color>#d13bbf</frame-color><fill-color>#d13bbf</fill-color><dither-pattern>I5</dither-pattern><valid>true</valid><visible>true</visible><name>EMIR_crit (204/0)</name><source>204/0@1</source></properties>
+</layer-properties>

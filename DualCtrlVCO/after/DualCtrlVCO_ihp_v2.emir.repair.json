@@ -1,0 +1,8 @@
+{
+ "schema": "emir.repair/1",
+ "design": "DualCtrlVCO_ihp_v2",
+ "pdk": "ihp130",
+ "iteration": 1,
+ "n": 0,
+ "directives": []
+}

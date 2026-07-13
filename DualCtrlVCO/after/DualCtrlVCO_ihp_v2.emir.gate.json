@@ -1,0 +1,38 @@
+{
+ "schema": "emir.gate/1",
+ "gds": "/home/navinm/agent/emir/ihp130_emir_showcase/DualCtrlVCO_ihp_v2.gds",
+ "pdk": "ihp130",
+ "top": "DualCtrlVCO_ihp_v2",
+ "pass": true,
+ "supplies": [
+  {
+   "net": "VREG",
+   "class": [
+    "vdd"
+   ],
+   "labels": [
+    "VREG"
+   ],
+   "r_eff_ohm": 44.107
+  },
+  {
+   "net": "VSS",
+   "class": [
+    "gnd"
+   ],
+   "labels": [
+    "VSS"
+   ],
+   "r_eff_ohm": 2.277
+  }
+ ],
+ "findings": [],
+ "stats": {
+  "nets": 15,
+  "segments": 1195
+ },
+ "policy": {
+  "fail_single_cut_via": false,
+  "r_eff_warn_ohm": 100.0
+ }
+}

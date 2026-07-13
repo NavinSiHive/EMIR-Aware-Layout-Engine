@@ -1,0 +1,33 @@
+IHP 130 nm EM/IR showcase — outputs license note
+=================================================
+
+What this repository is
+-----------------------
+This repository contains OUTPUT ARTIFACTS ONLY: the before/after EM/IR reports,
+per-rectangle heat maps, comparison tables, and READMEs for two analog cells
+rebuilt in IHP's open 130 nm process (sg13g2). These outputs are shareable — you
+may view, copy, and redistribute the artifacts and tables in this repository for
+evaluation and discussion, with attribution to Si-Hive.
+
+What this repository is NOT
+---------------------------
+The tools that PRODUCE these artifacts are NOT included here:
+
+  - the EM/IR analysis engine ("emirtool") — its extractor, IR nodal solver,
+    EM screen, repair-directive schema, and tech packs; and
+  - the CAL analog layout engine that builds and repairs the cells.
+
+Neither engine's source is part of this repository. This repo is a results
+showcase, not the engine.
+
+Provenance
+----------
+ihp130 EM limits are the foundry's own DCCURRENTDENSITY values, parsed from the
+IHP sg13g2 vendor tech LEF; results screened against them are signoff-grade (not
+estimates). The DualCtrlVCO result is a real, DRC/LVS-clean run (2026-07-14); no
+number in this repository is fabricated, estimated, or projected. Two figures are
+explicitly labeled rather than silently claimed: the supply current is reused from
+the identical sky130 sizing (not a fresh sg13g2 measure), and the AC decoupling MIM
+caps are omitted (no DC current — the DC EM/IR screen is unaffected).
+
+Contact: assist@si-hive.com

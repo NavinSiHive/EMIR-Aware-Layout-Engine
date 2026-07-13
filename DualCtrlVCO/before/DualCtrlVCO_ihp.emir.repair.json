@@ -1,0 +1,137 @@
+{
+ "schema": "emir.repair/1",
+ "design": "DualCtrlVCO_ihp",
+ "pdk": "ihp130",
+ "iteration": 1,
+ "n": 3,
+ "directives": [
+  {
+   "id": "d001",
+   "severity": "high",
+   "check": "em_avg",
+   "net": "VSS",
+   "layer": "Metal1",
+   "locus": {
+    "bbox_um": [
+     18.121,
+     -1.3,
+     37.014,
+     -1.13
+    ],
+    "segments": [
+     "VSS:32",
+     "VSS:36",
+     "VSS:26",
+     "VSS:25",
+     "VSS:22",
+     "VSS:21"
+    ]
+   },
+   "measured": {
+    "i_a": 0.0002871197019798983,
+    "imax_a": 8.523038434666979e-05,
+    "ratio": 3.37,
+    "width_um": 0.1579,
+    "cuts": 0,
+    "kind_checked": "avg"
+   },
+   "require": {
+    "kind": "WIDEN_SEGMENT",
+    "min_width_um": 0.638
+   },
+   "alternatives": [
+    {
+     "kind": "ADD_PARALLEL_STRAP"
+    },
+    {
+     "kind": "PROMOTE_LAYER",
+     "to": "Metal2"
+    }
+   ],
+   "priority": 2
+  },
+  {
+   "id": "d002",
+   "severity": "over",
+   "check": "em_avg",
+   "net": "VREG",
+   "layer": "Via1",
+   "locus": {
+    "bbox_um": [
+     44.19,
+     11.7,
+     44.19,
+     11.7
+    ],
+    "segments": [
+     "VREG:165"
+    ]
+   },
+   "measured": {
+    "i_a": 0.0004243151515146001,
+    "imax_a": 0.00021590977668567391,
+    "ratio": 1.97,
+    "width_um": 0.0,
+    "cuts": 1,
+    "kind_checked": "avg"
+   },
+   "require": {
+    "kind": "ADD_VIA_CUTS",
+    "min_cuts": 3
+   },
+   "alternatives": [
+    {
+     "kind": "ENLARGE_VIA_ARRAY"
+    }
+   ],
+   "priority": 3
+  },
+  {
+   "id": "d003",
+   "severity": "over",
+   "check": "em_avg",
+   "net": "VREG",
+   "layer": "Metal1",
+   "locus": {
+    "bbox_um": [
+     27.875,
+     11.7,
+     44.0,
+     11.7
+    ],
+    "segments": [
+     "VREG:84",
+     "VREG:83",
+     "VREG:82",
+     "VREG:81",
+     "VREG:80",
+     "VREG:79",
+     "VREG:78",
+     "VREG:77"
+    ]
+   },
+   "measured": {
+    "i_a": 0.00032284848497004566,
+    "imax_a": 0.00018352331018282284,
+    "ratio": 1.76,
+    "width_um": 0.34,
+    "cuts": 0,
+    "kind_checked": "avg"
+   },
+   "require": {
+    "kind": "WIDEN_SEGMENT",
+    "min_width_um": 0.718
+   },
+   "alternatives": [
+    {
+     "kind": "ADD_PARALLEL_STRAP"
+    },
+    {
+     "kind": "PROMOTE_LAYER",
+     "to": "Metal2"
+    }
+   ],
+   "priority": 3
+  }
+ ]
+}

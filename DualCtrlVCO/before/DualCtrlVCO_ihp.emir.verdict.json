@@ -1,0 +1,8 @@
+{
+ "pass": false,
+ "reasons": [
+  "15 EM violation(s) over 1x (signoff threshold), worst 3.37x"
+ ],
+ "review": "",
+ "policy": "real-pdk: gate at 1.0x"
+}

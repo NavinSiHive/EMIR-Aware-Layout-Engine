@@ -1,0 +1,30 @@
+
+Magic 8.3 revision 660 - Compiled on Tue Jun  9 07:21:39 IST 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=1048576]
+Using NULL graphics device.
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Sourcing design .magicrc for technology ihp-sg13g2 ...
+2 Magic internal units = 1 Lambda
+Input style sg13g2(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    pblock sealcont difffill nemitter hvnemitter hvisodiffres sealvia1 sealvia2 sealvia3 sealvia4 sealvia5 sealvia6 pillar solder seal glass thruvia inductor 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading ihp-sg13g2 Device Generator Menu ...
+Loading "/home/navinm/agent/cal_pll/out/DualCtrlVCO_ihp/_run.tcl" from command line.
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 6.0
+Library name: library
+Reading "DualCtrlVCO_ihp".
+Moving label "VCOARSE" from metal3 to via2 in cell DualCtrlVCO_ihp.
+Moving label "VFINE" from metal3 to via2 in cell DualCtrlVCO_ihp.
+Moving label "VCO_CLK" from metal2 to via1 in cell DualCtrlVCO_ihp.
+Loading DRC CIF style.
+CAL_DRC_COUNT 0
+No errors found.
+
