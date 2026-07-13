@@ -35,6 +35,30 @@ is estimated or projected — see the footnotes for the two honest labels.
 
 <sub>† Supply current **reused from the identical sky130 sizing** (same topology + device sizes); a fresh sg13g2 ngspice measure was out of scope. AC decoupling MIM caps are **omitted** — they carry no DC current, so the DC EM/IR screen is unaffected (and the ring runs faster → conservative). Worst-EM figures are the **signoff WC pair** (125 °C, worst-RCX); v2's 0.99× is a thin-but-real pass on the geometrically-boxed VREG rail. The 27-transistor VCO is DRC-0 (magic sg13g2) + LVS "Circuits match uniquely" (netgen sg13g2) in both states — logs in `DualCtrlVCO/{before,after}/`.</sub>
 
+## Before → after, in one picture
+
+Per-rectangle EM/IR heat maps at IHP's real foundry limits (125 °C worst-case corner).
+Each segment is colored by how close its current is to the foundry EM limit — **grey is
+within limit; yellow is watch; orange/red/magenta are over**. A hot neck lights up on its
+own, at rectangle granularity, rather than dragging its whole net with it.
+
+**v1 — habit-sized · worst 3.37× · FAIL**
+
+![DualCtrlVCO v1 (before) — EM/IR heat map, worst 3.37x on the VSS Metal1 supply straps](DualCtrlVCO/before/DualCtrlVCO_ihp.emir.heat.png)
+
+The five ring stages read left-to-right. The **red vertical strap and the orange supply
+rails** are where each stage's ~92 µA return current converges on 0.14–0.16 µm VSS Metal1
+— **3.37× over the real sg13g2 EM limit**. DRC-clean and LVS-matched; conventional checks
+see nothing here.
+
+**v2 — flow-repaired (one iteration) · worst 0.99× · PASS**
+
+![DualCtrlVCO v2 (after) — EM/IR heat map, 0 violations, worst 0.99x](DualCtrlVCO/after/DualCtrlVCO_ihp_v2.emir.heat.png)
+
+After the automated repair widened the supply source-straps, added a VSS Via1 array, and
+gave the VREG via a 2-cut landing, **the red is gone** — every segment back inside the
+real foundry limit (worst 0.99×), IR 18.6 → 9.9 mV, still DRC-0 / LVS-match.
+
 ## The cell
 
 - **[DualCtrlVCO](DualCtrlVCO/README.md)** — a dual-control ring oscillator (VCO), the
